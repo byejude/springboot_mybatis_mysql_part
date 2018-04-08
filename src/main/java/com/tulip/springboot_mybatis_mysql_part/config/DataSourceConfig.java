@@ -27,7 +27,6 @@ public class DataSourceConfig {
     }
 
     @Bean(name = "readDataSource01")
-    @Primary
     @ConfigurationProperties(prefix = "mysql.datasource.read01")
     public DataSource readDataSource01(){
         log.info("*******************readDataSource01 init***********************");
@@ -35,7 +34,6 @@ public class DataSourceConfig {
     }
 
     @Bean(name = "readDataSource02")
-    @Primary
     @ConfigurationProperties(prefix = "mysql.datasource.read02")
     public DataSource readDataSource02(){
         log.info("*******************readDataSource02 init***********************");

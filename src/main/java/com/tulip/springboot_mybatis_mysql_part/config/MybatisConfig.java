@@ -23,6 +23,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,13 +45,13 @@ public class MybatisConfig {
     @Value("${mysql.datasource.configLocation}")
     private String configLocation;
 
-    @Autowired
+    @Resource
     @Qualifier("writeDataSource")
     private DataSource writeDataSource;
-    @Autowired
+    @Resource
     @Qualifier("readDataSource01")
     private DataSource readDataSource01;
-    @Autowired
+    @Resource
     @Qualifier("readDataSource02")
     private DataSource readDataSource02;
 
