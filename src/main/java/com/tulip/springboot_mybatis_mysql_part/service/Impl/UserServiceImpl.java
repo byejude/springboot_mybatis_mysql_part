@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
         User uu = getService().findById(u.getId());
         log.info("==读写混合测试中的读(刚刚插入的)====id="+u.getId()+",  user_name=" + uu.getUserName());
         //为了测试,3个库中id=1的user_name是不一样的
-        User uuu = getService().findById("2");
+        User uuu = getService().findById(u.getId());
         log.info("==读写混合测试中的读====id=2,  user_name=" + uuu.getUserName());
     }
 

@@ -33,7 +33,8 @@ public class DataSourceAopInService implements PriorityOrdered{
     public void readDataSourceType(){
         //如果写事务开启的话后续都是走写库
         log.info("****"+DataSourceContextHolder.getReadOrWrite());
-        if(DataSourceContextHolder.getReadOrWrite()==null||!DataSourceContextHolder.getReadOrWrite().equals(DataSourceType.write)){
+        if(DataSourceContextHolder.getReadOrWrite()==null||!DataSourceContextHolder.getReadOrWrite().equals(DataSourceType.write.getType())){
+            log.info("**@@@@@@@@@@@**");
             DataSourceContextHolder.setRead();
         }
     }

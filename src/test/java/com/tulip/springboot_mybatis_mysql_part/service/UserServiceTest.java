@@ -19,13 +19,13 @@ public class UserServiceTest {
 
     @Test
     public void insertUser() {
-        User user = new User("4","test");
+        User user = new User("1","test");
         userService.insertUser(user);
     }
 
     @Test
     public void wirteAndRead() {
-        User user = new User("3","wirteAndRead");
+        User user = new User("8","wirteAndRead5");
         userService.wirteAndRead(user);
     }
 
@@ -35,7 +35,7 @@ public class UserServiceTest {
 
     @Test
     public void findById() {
-        User user = userService.findById("3");
+        User user = userService.findById("1");
         log.info("findById"+user.toString());
     }
 

@@ -126,6 +126,7 @@ public class MybatisConfig {
 
                 //读库， 简单负载均衡
                 int number = count.getAndAdd(1);
+                System.err.println("number-"+(number));
                 int lookupKey = number % readSize;
                 System.err.println("使用数据库read-"+(lookupKey+1));
                 return DataSourceType.read.getType()+(lookupKey+1);
